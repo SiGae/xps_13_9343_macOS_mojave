@@ -68,7 +68,7 @@
 
 ## 3. 설치 디스크 제작
 1. Git을 이용해서 이 Repo를 Clone 합니다. 
-2. Disk Utility에서 USB를 Mac OS Extended(journaling)으로 포맷합니다.
+2. Disk Utility에서 USB를 Mac OS Extended(journaling)형식으로 포맷합니다.
 3. 앱스토어에서 macOS mojave를 다운로드 합니다
 4. UniBeast를 실행하여 다음 버튼을 열심히 누르시다가 UEFI와 Legacy를 고르는 화면에선 UEFI를 선택하고 Copy가 완료될때 까지 기다립니다.
 5. Copy가 완료되면 USB의 EFI파티션 내부에 있는 EFI 폴더를 삭제 한 후 Clone한 Repo안에 있는 EFI폴더를 붙여넣기 합니다.
@@ -80,13 +80,13 @@
 2. F2로 눌러 Bios Setup으로 진입합니다.
 3. General -> Boot Sequence 메뉴에 진입하여 USB를 부팅 최상위 순위로 설정합니다. (USB메모리를 포맷할때 별도로 이름을 지정하지않았으면 Boot list Option에서 Add Boot Option버튼을 눌러 추가해줍니다.)
 4. General -> Advanced Boot Options 메뉴에서 Enable Legacy Option ROMs 옵션을 enable 해줍니다
-5. Security -> PTT Secutiyu 메뉴에서 Intel Platform Trust Technology 메뉴를 disable 해줍니다
+5. Security -> PTT Security 메뉴에서 Intel Platform Trust Technology 메뉴를 disable 해줍니다
 6. Secure Boot -> Secure Boot Enable 메뉴에서 해당 기능을 Disabled 해줍니다
 7. Save한뒤 Exit 해줍니다.
 8. 재부팅이 된후 Clover로 부팅이 되면 2번째 줄에 있는 option 메뉴로 진입합니다.
 9. 설치도중 에러가 날시 검색을 할 수 있게 Boot args 항목에 -v 를 추가하고 option메뉴에서 나갑니다
 10. 1번째 줄에 있는 install macOS from "USB name"를 선택합니다.
-11. 설치화면에 진입하게 되면 disk utility에 선택하시고 설치할 SSD를 APFS로 포맷해줍니다. (SSD 전체를 포맷하지 않으면 에러가 발생합니다.)
+11. 설치화면에 진입하게 되면 disk utility에 선택하시고 설치할 SSD를 APFS형식으로 포맷해줍니다. (SSD 전체를 포맷하지 않으면 에러가 발생합니다.)
 12. 화면의 지시에 따라 설치를 진행하면 재부팅이 n번 진행될 것입니다. 
 13. 설치가 완료되면 Clover화면에 Boot macOS from "USB name"이라는 디스크가 생깁니다. 해당 항목으로 부팅합니다
 14. 여러가지 설정을 하게 되는데 와이파이 연결없이, 애플 계정 연결없이 진행합니다.
@@ -105,7 +105,7 @@
     sudo rm -rf /Library/Extensions/ApplePS2SmartTouchPad.kext
     ```
 1. SSD에 있는 EFI파티션과 USB안에 있는 EFI파티션을 모두 마운트 해줍니다
-1. USB에 있는 EFI파티션의 efi/clover/kexts/otrhers 폴더안의 voodoops2controller.text 파일을 /Library/Extensions폴더로 복사합니다
+1. USB에 있는 EFI파티션의 efi/clover/kexts/others 폴더안의 voodoops2controller.text 파일을 /Library/Extensions폴더로 복사합니다
 2. SSD에 있는 EFI파티션 내부의 EFI폴더를 제거하고 USB의 EFI파티션에 있는 EFI폴더를 복사해줍니다.
 3. EFI폴더에 있는 config.plist파일을 clover configulator로 열고 smbios탭으로 들어갑니다
 4. Week of Manufacturer과 Unit Number 항목 옆의 shake버튼을 눌러줍니다. 
@@ -132,3 +132,4 @@
 
 ## 7. Update Log
 1. 19/03/17 1차 완성
+2. 19/03/17 오타 수정
