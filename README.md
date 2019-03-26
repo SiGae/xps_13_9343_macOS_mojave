@@ -47,6 +47,7 @@
 2. __USB 메모리__
 3. __macOS가 설치된 컴퓨터__
 5. __[UniBeast](https://www.tonymacx86.com/resources/unibeast-9-1-0-mojave.418/) (가입필요 )__
+6. __[Clover Bootloader](https://sourceforge.net/projects/cloverefiboot/)__
 
 7.  Clover Configurator
 6. __비어있는 일정과 넘치는 열정__
@@ -72,6 +73,7 @@
 3. 앱스토어에서 macOS mojave를 다운로드 합니다
 4. UniBeast를 실행하여 다음 버튼을 열심히 누르시다가 UEFI와 Legacy를 고르는 화면에선 UEFI를 선택하고 Copy가 완료될때 까지 기다립니다.
 5. Copy가 완료되면 USB의 EFI파티션 내부에 있는 EFI 폴더를 삭제 한 후 Clone한 Repo안에 있는 EFI폴더를 붙여넣기 합니다.
+6. Clover Bootloader를 실행하고 Continue 버튼을 두번 두른 후 customize를 누르고 __UEFI 부팅 전용 설치__ 와 __ESP에 Clover 설치__ 를 체크 한 후 설치 버튼을 누릅니다.
 
 ***
 
